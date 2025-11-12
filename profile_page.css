@@ -1,0 +1,135 @@
+/* ===== AyuGen Me Dropdown ===== */
+
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-trigger {
+  cursor: pointer;
+  color: #555;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-trigger:hover {
+  background-color: #f0f0f0;
+  color: #2e7d32; /* AyuGen green */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 280px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 0;
+  z-index: 1000;
+  display: none;
+  font-size: 0.95rem;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Profile Card */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1rem;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.profile-title {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.4rem;
+}
+
+.profile-stats {
+  font-size: 0.8rem;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+/* View Profile Button */
+.view-profile-btn {
+  width: calc(100% - 2rem);
+  padding: 0.6rem 1rem;
+  background: none;
+  border: 1px solid #2e7d32;
+  color: #2e7d32;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0.5rem 1rem;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.view-profile-btn:hover {
+  background-color: #e8f5e9;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 0.8rem 0;
+}
+
+/* Menu Item */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #f8f8f8;
+}
+
+.menu-item span:first-child {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Sign Out */
+.menu-item.sign-out {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.menu-item.sign-out:hover {
+  background-color: #ffebee;
+  color: #c62828;
+}
