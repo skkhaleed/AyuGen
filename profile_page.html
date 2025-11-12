@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Me · AyuGen</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #f3f2ef;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    .sidebar {
+      width: 240px;
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+      margin-right: 20px;
+    }
+    .sidebar h3 {
+      font-size: 14px;
+      color: #666;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px 5px;
+      color: #333;
+      text-decoration: none;
+      font-size: 15px;
+      border-radius: 4px;
+    }
+    .sidebar a:hover, .sidebar a.active {
+      background: #eef5ff;
+      color: #0a66c2;
+    }
+    .main {
+      flex: 1;
+    }
+    .profile-banner {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #0a66c2;
+      margin-right: 20px;
+    }
+    .profile-info {
+      flex: 1;
+    }
+    .profile-info h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+    .profile-info p {
+      color: #666;
+      margin: 5px 0;
+    }
+    .edit-btn {
+      background: #0a66c2;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .section {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+    .section h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .activity-item {
+      display: flex;
+      margin-bottom: 15px;
+    }
+    .activity-icon {
+      margin-right: 15px;
+      font-size: 24px;
+    }
+    .activity-text {
+      flex: 1;
+    }
+    .activity-text h4 {
+      margin: 0;
+      font-size: 15px;
+    }
+    .activity-text p {
+      margin: 3px 0;
+      font-size: 13px;
+      color: #666;
+    }
+    .account-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .setting-card {
+      background: #f8f9fa;
+      border-radius: 6px;
+      padding: 15px;
+    }
+    .setting-card h4 {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #0a66c2;
+    }
+    .setting-card p {
+      font-size: 13px;
+      color: #666;
+    }
+    .back-home {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      color: #0a66c2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-home">← Back to Home</a>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>Manage your account</h3>
+      <a href="#profile" class="active">Profile</a>
+      <a href="#activity">Posts & Activity</a>
+      <a href="#security">Sign in & Security</a>
+      <a href="#personal">Personal info</a>
+      <a href="#accounts">Add/switch accounts</a>
+      <a href="#logout">Log out</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Profile Banner -->
+      <div class="profile-banner">
+        <img src="https://via.placeholder.com/80?text=Ayugen" alt="Ayugen" class="profile-pic" />
+        <div class="profile-info">
+          <h1>Ayugen ✔️</h1>
+          <p>Student · Veltech Dr.RR Dr.SR University</p>
+          <p>Chennai, Tamil Nadu</p>
+          <button class="edit-btn">Edit public profile</button>
+        </div>
+      </div>
+
+      <!-- Activity Section -->
+      <div class="section" id="activity">
+        <h2>Recent Activity</h2>
+        <div class="activity-item">
+          <span class="activity-icon">📝</span>
+          <div class="activity-text">
+            <h4>Published a post</h4>
+            <p>Ayurveda & AI: Can technology preserve ancient wisdom?</p>
+            <p><small>2 days ago</small></p>
+          </div>
+        </div>
+        <div class="activity-item">
+          <span class="activity-icon">🎓</span>
+          <div class="activity-text">
+            <h4>Completed course</h4>
+            <p>Introduction to Ayurvedic Pharmacology</p>
+            <p><small>1 week ago</small></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Settings -->
+      <div class="section" id="security">
+        <h2>Account Settings</h2>
+        <div class="account-section">
+          <div class="setting-card">
+            <h4>🔐 Sign in & Security</h4>
+            <p>Manage passwords, 2FA, recovery options</p>
+          </div>
+          <div class="setting-card">
+            <h4>👤 Personal Information</h4>
+            <p>Name, email, phone, gender, date of birth</p>
+          </div>
+          <div class="setting-card">
+            <h4>🔗 Connected Accounts</h4>
+            <p>Google, GitHub, ResearchGate</p>
+          </div>
+          <div class="setting-card">
+            <h4>🎨 Appearance</h4>
+            <p>Theme, font, notifications</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
